@@ -6,7 +6,7 @@ function checkCode() {
     if (code === validCode) {
         window.location.href = "accueil.html"; // Redirection vers le site
     } else {
-        window.location.href = "404\404.html"; // Redirection vers la page d'erreur
+        window.location.replace("404/404.html"); // Redirection vers la page d'erreur
     }
 }
 
