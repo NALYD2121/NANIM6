@@ -2,8 +2,8 @@ document.getElementById('searchButton').addEventListener('click', function() {
     const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
     console.log('Recherche : ', searchTerm);  // Débogage
     const searchResults = {
-        "index": "index.html",
-        "accueil": "index.html",
+        "accueil": "accueil.html",
+        "accueil": "accueil.html",
         "films": "Films.html",
         "Film": "Films.html",
         "Séries": "Séries.html",
@@ -33,8 +33,8 @@ document.getElementById('searchInput').addEventListener('keydown', function(e) {
         const searchTerm = e.target.value.trim().toLowerCase();
         console.log('Recherche avec Entrée : ', searchTerm);  // Débogage
         const searchResults = {
-            "index": "index.html",
-            "accueil": "index.html",
+            "accueil": "accueil.html",
+            "accueil": "accueil.html",
             "films": "Films.html",
             "Film": "Films.html",
             "Séries": "Séries.html",

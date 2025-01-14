@@ -4,7 +4,7 @@ document.getElementById('searchButton').addEventListener('click', function() {
     if (searchTerm) {
         // Ajouter une gestion plus générique
         const searchResults = {
-            "index": "../index.html",
+            "accueil": "../accueil.html",
             "Accueil": "../Accueil.html",
             "Films": "../Films.html",
             "Film": "../Films.html",
@@ -36,7 +36,7 @@ document.getElementById('searchInput').addEventListener('keypress', function(e) 
     if (e.key === 'Enter') {
         const searchTerm = e.target.value.trim().toLowerCase();
         const searchResults = {
-            "index": "../index.html",
+            "accueil": "../accueil.html",
             "Accueil": "../Accueil.html",
             "Films": "../Films.html",
             "Film": "../Films.html",

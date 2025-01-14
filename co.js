@@ -4,7 +4,7 @@ function checkCode() {
     const validCode = "123"; // Remplacez par votre code secret
 
     if (code === validCode) {
-        window.location.href = "../index.html"; // Redirection vers le site
+        window.location.href = "accueil.html"; // Redirection vers le site
     } else {
         alert("Code incorrect !");
     }
