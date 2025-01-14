@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="404.css">
 </head>
 <body>
+    <!-- Conteneur de particules -->
     <div id="particles-js"></div>
+
+    <!-- Conteneur de l'erreur -->
     <div class="error-container">
         <h1>404</h1>
         <p>La page que vous cherchez n'existe pas.</p>
         <div>
-            <a href=" ../index.html" class="back-link">Retour à l'accueil</a>
+            <a href="../index.html" class="back-link">Retour à l'accueil</a>
         </div>
     </div>
 
@@ -21,5 +24,12 @@
 
     <!-- Chargement de votre script de configuration -->
     <script src="particles-config.js"></script>
+
+    <!-- Redirection automatique vers l'index après 5 secondes (optionnel) -->
+    <script>
+        setTimeout(function() {
+            window.location.href = "../index.html";  // Redirection vers index.html après 5 secondes
+        }, 5000); // 5000ms = 5 secondes
+    </script>
 </body>
 </html>
