@@ -1,0 +1,97 @@
+/* Arrière-plan avec un dégradé animé et des teintes sombres */
+body {
+    background: linear-gradient(45deg, #2e003e, #4b0082, #3c0071, #5a2e8c);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Animation du dégradé */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Style de la boîte principale */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+/* Titre principal */
+.container h1 {
+    font-size: 50px;
+    color: #8c00ff;
+    margin-bottom: 20px;
+}
+
+/* Texte descriptif */
+.container p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Champ de saisie */
+input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+    max-width: 300px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Bouton */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #8c00ff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #8c00ff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #8c00ff;
+    color: #fff;
+}
+/* Conteneur des particules */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Conteneur principal */
+.container {
+    position: relative;
+    z-index: 1; /* Place le contenu au-dessus des particules */
+}

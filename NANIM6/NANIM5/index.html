@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANIM5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>NANIM5</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="button-nav">Accueil</a></li>
+                <li><a href="Films.html" class="button-nav">Films</a></li>
+                <li><a href="Séries.html" class="button-nav">Séries</a></li>
+                <li><a href="Animés.html" class="button-nav">Animés</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher un film, série ou animé..." id="searchInput">
+            <button id="searchButton" class="button-nav" aria-label="Rechercher">🔍</button>
+        </div>        
+        <!-- Nouveau bouton interrupteur pour dark mode -->
+        <div class="toggle-container">
+            <input type="checkbox" id="darkModeToggle" class="toggle-checkbox">
+            <label for="darkModeToggle" class="toggle-label">
+                <span class="toggle-ball"></span>
+            </label>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="background">
+        </div>
+        <div class="hero-content">
+            <h2>Bienvenue sur NANIM5</h2>
+            <button class="cta">Commencez à regarder</button>
+        </div>
+    </section>
+    <section class="trending">
+        <h2>Les films tendance</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <a href="op/onepeice.html">
+                    <img src="image/1east-blue.webp" alt="Affiche du Film A">
+                    <h3>ONE PIECE</h3>
+                </a>
+            </div>
+            <div class="video-card">
+                <a href="404/404.html">
+                    <img src="image/TEST.png" alt="Affiche du Film B">
+                    <h3>TEST</h3>
+                </a>
+            </div>
+            <div class="video-card">
+                <a href="404/404.html">
+                    <img src="image/TEST.png" alt="Affiche du Film C">
+                    <h3>TEST</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="particles"></div>
+        <p>&copy; 2025 NANIM5. Tous droits réservés.</p>
+        <a href="#">Conditions d'utilisation</a> | <a href="#">Politique de confidentialité</a>
+    </footer>
+
+
+    <script src="scripts.js"></script>
+    <div id="particles-js"></div>
+    <script src="particles.min.js"></script>
+    <script src="particles-config.js"></script>
+    <script src="Animés.js"></script>
+</body>
+</html>
