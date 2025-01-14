@@ -1,0 +1,80 @@
+/* Arrière-plan avec un dégradé animé et des teintes plus sombres et subtiles */
+body {
+    background: linear-gradient(45deg, #2e003e, #4b0082, #3c0071, #5a2e8c);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Animation du dégradé */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.error-container {
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.error-container h1 {
+    font-size: 80px;
+    color: #8c00ff;
+    margin-bottom: 20px;
+}
+
+.error-container p {
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.error-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.error-image:hover {
+    transform: scale(1.1);
+}
+
+.back-link {
+    font-size: 18px;
+    color: #8c00ff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #8c00ff;
+    border-radius: 5px;
+}
+
+.back-link:hover {
+    background-color: #8c00ff;
+    color: #fff;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}

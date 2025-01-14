@@ -1,0 +1,259 @@
+/* Définir les couleurs par défaut (mode clair) */
+:root {
+    --background-color: #121212; /* Fond sombre par défaut */
+    --text-color: #e0e0e0; /* Texte clair */
+    --link-color: #9c00e6; /* Violet pour les liens */
+
+    --card-bg: linear-gradient(15deg, #270338, #8c00ff); /* Dégradé pour les cartes */
+    --card-text-color: #e0e0e0; /* Texte des cartes */
+}
+
+/* Mode sombre */
+body.dark-mode {
+    --background-color: #121212; /* Fond très sombre */
+    --text-color: #e0e0e0; /* Texte clair */
+    --link-color: #bb86fc; /* Couleur des liens en mode sombre */
+
+    --card-bg: #4a0080; /* Fond des cartes */
+    --card-text-color: #e0e0e0; /* Texte des cartes */
+}
+
+/* Dégradé animé pour le fond */
+body {
+    background: linear-gradient(-45deg, #8c00ff, #270338, #4a0080, #9c00e6);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: var(--text-color); /* Couleur du texte définie */
+    overflow: auto; /* Permet le défilement de la page */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+/* Mode sombre: ajuster les couleurs des liens et boutons */
+body.dark-mode .button-nav {
+    color: white; /* Couleur blanche pour les liens dans le mode sombre */
+}
+
+/* Bascule du mode sombre */
+.toggle-container {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    background-color: #6a00cc; /* Violet clair */
+    border-radius: 30px;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+}
+
+.toggle-ball {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+/* Mode sombre activé */
+.toggle-checkbox:checked + .toggle-label .toggle-ball {
+    transform: translateX(30px);
+}
+
+/* Section des cartes */
+.row {
+    margin: 40px auto;
+    text-align: center;
+    max-width: 1200px;
+    width: 100%; /* Prendre toute la largeur disponible */
+}
+
+.row h2 {
+    margin-bottom: 20px;
+    color: var(--link-color); /* Couleur des titres (violet) */
+    font-size: 36px; /* Taille de police fixe */
+}
+
+/* Conteneur pour le défilement horizontal */
+.horizontal-scroll-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Supprime la barre de défilement */
+    margin-bottom: 30px;
+    width: 100%; /* Prendre toute la largeur */
+    border-radius: 10px; /* Arrondir les bords */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+.horizontal-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Permet de faire défiler sans barre visible */
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    width: 100%; /* Prendre toute la largeur */
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none; /* Supprime la barre de défilement */
+}
+
+/* Carte */
+.card {
+    background: var(--card-bg); /* Dégradé violet */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 15px;
+    width: 250px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%; /* Assure que la largeur de la carte ne dépasse pas la taille de l'écran */
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Sous-titre */
+.card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: transparent; /* Appliquer la transparence pour le texte */
+    transition: color 0.3s ease;
+    margin-top: 15px;
+    background: linear-gradient(45deg, #6a00cc, #bb86fc, #4a0080, #9c00e6);
+    background-size: 400% 400%;
+    -webkit-background-clip: text; /* Applique le dégradé sur le texte */
+    animation: gradientTextAnimation 10s ease infinite;
+}
+
+/* Animation du texte dégradé */
+@keyframes gradientTextAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Effet de survol sur l'image */
+.card:hover img {
+    transform: scale(1.05); /* Zoom sur l'image */
+}
+
+/* Effet au survol sur la carte : changer la couleur du sous-titre en blanc */
+.card:hover h3 {
+    color: #ffffff; /* Changer le titre en blanc lorsqu'on survole la carte */
+}
+
+/* Effet de zoom et changement de couleur au survol */
+.card h3:hover {
+    transform: scale(1.1); /* Zoom sur le titre */
+    color: #ffffff; /* Changer la couleur du texte en blanc lors du survol pour plus de lisibilité */
+}
+
+/* Boutons ovales avec dégradé et animation */
+.scroll-button {
+    background: linear-gradient(45deg, rgba(156, 0, 230, 0.5), rgba(106, 0, 204, 0.5)); /* Dégradé violet avec transparence */
+    color: white;
+    border: 2px solid rgba(156, 0, 230, 0.7); /* Bordure semi-transparente */
+    padding: 15px 30px; /* Plus large pour la forme ovale */
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50px; /* Forme ovale */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+    animation: pulse 2s infinite;
+    backdrop-filter: blur(5px); /* Applique un flou derrière le bouton pour un effet "verre" */
+    opacity: 0.8; /* Légère transparence */
+}
+
+/* Bouton droite */
+.scroll-button.right {
+    right: 5px; /* Décale le bouton vers la droite */
+}
+
+/* Bouton gauche */
+.scroll-button.left {
+    left: 5px; /* Décale le bouton vers la gauche */
+}
+
+/* Effet de survol sur les boutons */
+.scroll-button:hover {
+    background-color: rgba(106, 0, 204, 0.8); /* Augmenter l'opacité au survol */
+    border-color: rgba(106, 0, 204, 1);
+    transform: translateY(-50%) scale(1.1);
+    opacity: 1; /* Rendre le bouton plus opaque au survol */
+}
+
+/* Animation de pulsation */
+@keyframes pulse {
+    0% {
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.05);
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+/* En-tête */
+header {
+    padding: 40px; /* Augmenter l'espace autour du contenu de l'en-tête */
+    text-align: center;
+    color: white;
+    width: 100%;
+    background: var(--header-footer-bg); /* Utilise le dégradé pour le header */
+}
+
